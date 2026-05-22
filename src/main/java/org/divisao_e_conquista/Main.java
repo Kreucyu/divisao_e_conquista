@@ -26,5 +26,12 @@ public class Main {
         System.out.println(divisaoEConquista3.buscarIndice(167).toString());;
         System.out.println(divisaoEConquista3.buscarIndice(0).toString());;
         System.out.println(divisaoEConquista3.buscarIndice(6).toString());;
+
+        System.out.println("\nQuestão 3:");
+        String texto = "FURB";
+        String[] vetorString = texto.split("");
+
+        Algoritmo divisaoEConquista4 = new Algoritmo(null);
+        System.out.println(divisaoEConquista4.inverterString(vetorString));
     }
 }

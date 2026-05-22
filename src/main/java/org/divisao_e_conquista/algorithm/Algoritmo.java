@@ -3,7 +3,7 @@ package org.divisao_e_conquista.algorithm;
 import org.divisao_e_conquista.entities.Resposta;
 
 public class Algoritmo {
-    private int[] vetor;
+    private final int[] vetor;
 
     public Algoritmo(int[] vetor) {
         this.vetor = vetor;
@@ -54,6 +54,10 @@ public class Algoritmo {
                 return buscarValorIndice(pivo + 1, fim, valorBusca);
             }
         }
+        return null;
+    }
+
+    public String inverterString(String[] string) {
         return null;
     }
 }
