@@ -21,10 +21,10 @@ public class Main {
         Algoritmo divisaoEConquista2 = new Algoritmo(vetorPar1);
         Algoritmo divisaoEConquista3 = new Algoritmo(vetorImpar1);
 
-        System.out.println(divisaoEConquista2.buscar(8).toString());
-        System.out.println(divisaoEConquista2.buscar(1).toString());
-        System.out.println(divisaoEConquista3.buscar(167).toString());;
-        System.out.println(divisaoEConquista3.buscar(0).toString());;
-        System.out.println(divisaoEConquista3.buscar(6).toString());;
+        System.out.println(divisaoEConquista2.buscarIndice(8).toString());
+        System.out.println(divisaoEConquista2.buscarIndice(1).toString());
+        System.out.println(divisaoEConquista3.buscarIndice(167).toString());;
+        System.out.println(divisaoEConquista3.buscarIndice(0).toString());;
+        System.out.println(divisaoEConquista3.buscarIndice(6).toString());;
     }
 }

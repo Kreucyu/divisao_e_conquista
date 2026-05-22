@@ -34,7 +34,7 @@ public class Algoritmo {
     }
 
     public Resposta buscarIndice(int valorBusca) {
-        var retorno = buscarValor(0, vetor.length - 1, valorBusca);
+        var retorno = buscarValorIndice(0, vetor.length - 1, valorBusca);
         if(retorno == null) {
             return new Resposta(false, "Valor não encontrado");
         }
@@ -48,10 +48,10 @@ public class Algoritmo {
         }
         if(inicio < fim) {
             if(vetor[pivo] > valorBusca) {
-                return buscarValor(inicio, pivo, valorBusca);
+                return buscarValorIndice(inicio, pivo, valorBusca);
             }
             if(vetor[pivo] < valorBusca) {
-                return buscarValor(pivo + 1, fim, valorBusca);
+                return buscarValorIndice(pivo + 1, fim, valorBusca);
             }
         }
         return null;
