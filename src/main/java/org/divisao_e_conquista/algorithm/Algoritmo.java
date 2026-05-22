@@ -20,12 +20,16 @@ public class Algoritmo {
     private Resposta buscarValor(int inicio, int fim, int valorBusca) {
         int pivo = (inicio + fim) / 2;
         if(vetor[pivo] == valorBusca) {
-            return pivo;
+            return new Resposta(true, "Valor (" + valorBusca  + ") encontrado na posição: " + pivo);
         }
-
         if(inicio < fim) {
-            buscarValor(inicio, pivo, valorBusca);
-            buscarValor(pivo + 1, fim, valorBusca);
+            if(vetor[pivo] > valorBusca) {
+                return buscarValor(inicio, pivo, valorBusca);
+            }
+            if(vetor[pivo] < valorBusca) {
+                return buscarValor(pivo + 1, fim, valorBusca);
+            }
         }
+        return null;
     }
 }
