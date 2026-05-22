@@ -61,7 +61,10 @@ public class Algoritmo {
 
     //Questão 3
     public String inverterString(String[] string) {
-
+        if(string.length % 2 == 0) {
+            System.out.println("if" + (string.length % 2));
+        }
+        System.out.println("fora" + (string.length % 2));
         return null;
     }
 }
