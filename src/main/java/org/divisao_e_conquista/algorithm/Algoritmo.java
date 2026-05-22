@@ -9,6 +9,7 @@ public class Algoritmo {
         this.vetor = vetor;
     }
 
+    //Questão 1
     public Resposta buscar(int valorBusca) {
         var retorno = buscarValor(0, vetor.length - 1, valorBusca);
         if(retorno == null) {
@@ -33,6 +34,7 @@ public class Algoritmo {
         return null;
     }
 
+    //Questão 2
     public Resposta buscarIndice(int valorBusca) {
         var retorno = buscarValorIndice(0, vetor.length - 1, valorBusca);
         if(retorno == null) {
@@ -57,7 +59,9 @@ public class Algoritmo {
         return null;
     }
 
+    //Questão 3
     public String inverterString(String[] string) {
+
         return null;
     }
 }
