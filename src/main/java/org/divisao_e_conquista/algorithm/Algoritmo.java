@@ -6,17 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Algoritmo {
-    private final int[] vetor;
+    private int[] vetor;
     private String[] stringVetor;
     private Map<Integer, Integer> ocorrenciasNumericas;
 
-    public Algoritmo(int[] vetor) {
-        this.vetor = vetor;
+    public Algoritmo() {
         this.ocorrenciasNumericas = new HashMap<>();
     }
 
     //Questão 1
-    public Resposta buscar(int valorBusca) {
+    public Resposta buscar(int valorBusca, int[] vetor) {
+        this.vetor = vetor;
         var retorno = buscarValor(0, vetor.length - 1, valorBusca);
         if(retorno == null) {
             return new Resposta(false, "Valor não encontrado");
@@ -41,7 +41,8 @@ public class Algoritmo {
     }
 
     //Questão 2
-    public Resposta buscarIndice(int valorBusca) {
+    public Resposta buscarIndice(int valorBusca, int[] vetor) {
+        this.vetor = vetor;
         var retorno = buscarValorIndice(0, vetor.length - 1, valorBusca);
         if(retorno == null) {
             return new Resposta(false, "Valor não encontrado");
@@ -81,7 +82,8 @@ public class Algoritmo {
     }
 
     //Questão 4
-    public String encontrarMaioria() {
+    public String encontrarMaioria(int[] vetor) {
+        this.vetor = vetor;
         encontrarMairoriaBuscar(0, vetor.length - 1);
         int valor = 0;
         int ocorrencias = 0;
