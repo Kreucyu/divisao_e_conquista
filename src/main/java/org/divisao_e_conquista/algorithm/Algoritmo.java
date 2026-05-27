@@ -4,6 +4,7 @@ import org.divisao_e_conquista.entities.Resposta;
 
 public class Algoritmo {
     private final int[] vetor;
+    private String[] stringVetor;
 
     public Algoritmo(int[] vetor) {
         this.vetor = vetor;
@@ -61,10 +62,13 @@ public class Algoritmo {
 
     //Questão 3
     public String inverterString(String[] string) {
-        if(string.length % 2 == 0) {
-            System.out.println("if" + (string.length % 2));
-        }
-        System.out.println("fora" + (string.length % 2));
-        return null;
+        this.stringVetor = string;
+        return inverterStringRecursivo(0, string.length - 1);
+    }
+
+
+    private String inverterStringRecursivo(int inicio, int fim) {
+        int meio = (inicio + fim) / 2;
+        return inverterStringRecursivo(inicio, meio) + inverterStringRecursivo(meio + 1, fim);
     }
 }
