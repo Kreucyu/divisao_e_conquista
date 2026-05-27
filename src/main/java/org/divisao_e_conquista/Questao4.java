@@ -14,6 +14,8 @@ public class Questao4 {
         Algoritmo algoritmo2 = new Algoritmo(vetor3);
 
         System.out.println(algoritmo.encontrarMaioria());
+        System.out.println(algoritmo1.encontrarMaioria());
+        System.out.println(algoritmo2.encontrarMaioria());
 
     }
 }

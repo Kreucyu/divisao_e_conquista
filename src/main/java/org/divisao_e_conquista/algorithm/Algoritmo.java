@@ -83,21 +83,40 @@ public class Algoritmo {
     //Questão 4
     public String encontrarMaioria() {
         encontrarMairoriaBuscar(0, vetor.length - 1);
-        System.out.println(ocorrenciasNumericas.values());
-        return null;
+        int valor = 0;
+        int ocorrencias = 0;
+        for(Map.Entry<Integer, Integer> buscar : ocorrenciasNumericas.entrySet()) {
+            if(buscar.getValue() > ocorrencias) {
+                ocorrencias = buscar.getValue();
+                valor = buscar.getKey();
+            }
+        }
+        if(ocorrencias > vetor.length / 2) {
+            return "O valor em maioria é "
+                    + valor +
+                    ", com o total de "
+                    + ocorrencias +
+                    " ocorrências";
+        }
+        return "Não foi encontrado nenhum valor em maioria, " +
+                "porém o valor com maior ocorrência é "
+                + valor +
+                ", com o total de "
+                + ocorrencias +
+                " ocorrências";
     }
 
     private void encontrarMairoriaBuscar(int inicio, int fim) {
         int meio = (inicio + fim) / 2;
         if(inicio == fim) {
-            if(!ocorrenciasNumericas.containsKey(vetor[meio])) {
-                ocorrenciasNumericas.put(vetor[meio], 1);
-            }
-            else {
+            if(ocorrenciasNumericas.containsKey(vetor[meio])) {
                 int ocorrencias = ocorrenciasNumericas.get(vetor[meio]);
                 ocorrencias++;
                 ocorrenciasNumericas.put(vetor[meio], ocorrencias);
+                return;
             }
+            ocorrenciasNumericas.put(vetor[meio], 1);
+            return;
         }
         if(inicio < fim) {
             encontrarMairoriaBuscar(inicio, meio);
