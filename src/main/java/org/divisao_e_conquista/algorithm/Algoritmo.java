@@ -2,12 +2,17 @@ package org.divisao_e_conquista.algorithm;
 
 import org.divisao_e_conquista.entities.Resposta;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Algoritmo {
     private final int[] vetor;
     private String[] stringVetor;
+    private Map<Integer, Integer> ocorrenciasNumericas;
 
     public Algoritmo(int[] vetor) {
         this.vetor = vetor;
+        this.ocorrenciasNumericas = new HashMap<>();
     }
 
     //Questão 1
@@ -73,5 +78,30 @@ public class Algoritmo {
         }
         int meio = (inicio + fim) / 2;
         return  inverterStringRecursivo(meio + 1, fim)  + inverterStringRecursivo(inicio, meio);
+    }
+
+    //Questão 4
+    public String encontrarMaioria() {
+        encontrarMairoriaBuscar(0, vetor.length - 1);
+        System.out.println(ocorrenciasNumericas.values());
+        return null;
+    }
+
+    private void encontrarMairoriaBuscar(int inicio, int fim) {
+        int meio = (inicio + fim) / 2;
+        if(inicio == fim) {
+            if(!ocorrenciasNumericas.containsKey(vetor[meio])) {
+                ocorrenciasNumericas.put(vetor[meio], 1);
+            }
+            else {
+                int ocorrencias = ocorrenciasNumericas.get(vetor[meio]);
+                ocorrencias++;
+                ocorrenciasNumericas.put(vetor[meio], ocorrencias);
+            }
+        }
+        if(inicio < fim) {
+            encontrarMairoriaBuscar(inicio, meio);
+            encontrarMairoriaBuscar(meio + 1, fim);
+        }
     }
 }
