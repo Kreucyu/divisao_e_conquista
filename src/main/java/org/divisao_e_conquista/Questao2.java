@@ -2,7 +2,7 @@ package org.divisao_e_conquista;
 
 import org.divisao_e_conquista.algorithm.Algoritmo;
 
-public class questao2 {
+public class Questao2 {
     public static void main(String[] args) {
         System.out.println("\nQuestão 2:");
         int[] vetorPar1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};

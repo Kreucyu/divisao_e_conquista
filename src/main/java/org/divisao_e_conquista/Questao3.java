@@ -2,7 +2,7 @@ package org.divisao_e_conquista;
 
 import org.divisao_e_conquista.algorithm.Algoritmo;
 
-public class questao3 {
+public class Questao3 {
     public static void main(String[] args) {
         System.out.println("\nQuestão 3:");
         String texto = "FURB";
