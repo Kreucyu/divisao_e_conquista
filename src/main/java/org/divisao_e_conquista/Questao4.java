@@ -9,13 +9,11 @@ public class Questao4 {
         int[] vetor2 = {1, 2, 0, 2, 2, 3, 2, 7, 2, 1, 2, 1, 3, 2, 2};
         int[] vetor3 = {1, 1, 2, 5, 2, 0};
 
-        Algoritmo algoritmo = new Algoritmo(vetor1);
-        Algoritmo algoritmo1 = new Algoritmo(vetor2);
-        Algoritmo algoritmo2 = new Algoritmo(vetor3);
+        Algoritmo algoritmo = new Algoritmo();
 
-        System.out.println(algoritmo.encontrarMaioria());
-        System.out.println(algoritmo1.encontrarMaioria());
-        System.out.println(algoritmo2.encontrarMaioria());
+        System.out.println(algoritmo.encontrarMaioria(vetor1));
+        System.out.println(algoritmo.encontrarMaioria(vetor2));
+        System.out.println(algoritmo.encontrarMaioria(vetor3));
 
     }
 }

@@ -17,10 +17,10 @@ public class Questao3 {
         String[] vetorString3 = palavrasReversas.split("");
 
 
-        Algoritmo divisaoEConquista4 = new Algoritmo(null);
-        System.out.println(divisaoEConquista4.inverterString(vetorString));
-        System.out.println(divisaoEConquista4.inverterString(vetorString1));
-        System.out.println(divisaoEConquista4.inverterString(vetorString2));
-        System.out.println("\n" + divisaoEConquista4.inverterString(vetorString3));
+        Algoritmo algoritmo = new Algoritmo();
+        System.out.println(algoritmo.inverterString(vetorString));
+        System.out.println(algoritmo.inverterString(vetorString1));
+        System.out.println(algoritmo.inverterString(vetorString2));
+        System.out.println("\n" + algoritmo.inverterString(vetorString3));
     }
 }

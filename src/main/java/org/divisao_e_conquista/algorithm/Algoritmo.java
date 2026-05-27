@@ -11,7 +11,6 @@ public class Algoritmo {
     private Map<Integer, Integer> ocorrenciasNumericas;
 
     public Algoritmo() {
-        this.ocorrenciasNumericas = new HashMap<>();
     }
 
     //Questão 1
@@ -84,6 +83,7 @@ public class Algoritmo {
     //Questão 4
     public String encontrarMaioria(int[] vetor) {
         this.vetor = vetor;
+        this.ocorrenciasNumericas = new HashMap<>();
         encontrarMairoriaBuscar(0, vetor.length - 1);
         int valor = 0;
         int ocorrencias = 0;
