@@ -68,7 +68,10 @@ public class Algoritmo {
 
 
     private String inverterStringRecursivo(int inicio, int fim) {
+        if(inicio == fim) {
+            return stringVetor[inicio];
+        }
         int meio = (inicio + fim) / 2;
-        return inverterStringRecursivo(inicio, meio) + inverterStringRecursivo(meio + 1, fim);
+        return  inverterStringRecursivo(meio + 1, fim)  + inverterStringRecursivo(inicio, meio);
     }
 }
